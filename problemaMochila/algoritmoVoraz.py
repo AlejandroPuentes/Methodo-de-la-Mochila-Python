@@ -1,4 +1,3 @@
-#Autor: Juan Fernando Rodríguez Díaz
 from productos import producto
 from algoritmos import *
 import numpy as np  
