@@ -1,6 +1,7 @@
 from productos import producto
 from algoritmos import *
 import numpy as np  
+
 def maxe(a,b):
     if a>b:
         return a
@@ -18,6 +19,8 @@ def retornaLista(cadena):
     else:
         return False
 
+
+
 print("Registe ingresando: nombre del producto \"espacio\" peso \"espacio\" valor. O escriba \"stop\" para parar")
 lista = []
 
@@ -27,16 +30,22 @@ while True:
         break
     entrada = entrada.split()
     lista.append(producto(entrada[0],int(entrada[1]),int(entrada[2])))
+
 entrada = []
+
 for i in lista:
     entrada.append((int(i.getPeso()),int(i.getValor())))
 peso = int(input("Ingrese el peso maximo"))
+
 print(max(entrada,peso))
+
 matriz= np.zeros((len(lista)+1,peso+1))
 print ("ssssss")
+
 for i in range (0,len(lista)):
     print(lista[i].getPeso())
 print (matriz)
+
 print("esta es la matriz resultado")
 for i in  range (1,(len(lista)+1)):
     for j in range(1,(peso+1)):
