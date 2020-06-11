@@ -37,8 +37,6 @@ for i in lista:
     entrada.append((int(i.getPeso()),int(i.getValor())))
 peso = int(input("Ingrese el peso maximo"))
 
-print(max(entrada,peso))
-
 matriz= np.zeros((len(lista)+1,peso+1))
 print ("ssssss")
 
@@ -49,7 +47,10 @@ print (matriz)
 print("esta es la matriz resultado")
 for i in  range (1,(len(lista)+1)):
     for j in range(1,(peso+1)):
-        if j>(lista[i-1].getPeso()):
-            matriz[i][j] = maxe(matriz[i-1][j],matriz[i-1][j-lista[i-1].getPeso()]+lista[i-1].getValor())
+        if j>=(lista[i-1].getPeso()):
+            matriz[i][j] = maxe(matriz[i-1][j],(matriz[i-1][j-lista[i-1].getPeso()])+lista[i-1].getValor())
+        elif j<(lista[i-1].getPeso()):
+            matriz[i-1][j]
+
 
 print (matriz)
