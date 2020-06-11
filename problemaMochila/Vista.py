@@ -6,23 +6,25 @@ class Aplicacion():
 
     def crearTabla(self):
         x1 = 0
-        y1 = 0
-        if not self.variablesEntrada.get() and not self.restriccionesEntrada.get():
+        if not self.pesoEntrada.get() or not self.articulosEntrada.get():
             MessageBox.showerror("ERROR", "Por favor llene los espacios")
         else:
-            for b in range(int(self.restriccionesEntrada.get())):
-                x1 = 0
-                for i in range(int(self.variablesEntrada.get())):
-                    self.entradas = ttk.Entry(self.ventana, width = 5)
-                    self.entradas.place(x=10 + x1, y = 200 + y1)
-                    self.variablesx = ttk.Label(self.ventana, text = "x" + str(i), width = 5, font = ("Helvetica","10"))
-                    self.variablesx.place(x=50 + x1,y=200 +y1)
-                    x1 += 70
-                self.botonIgual = ttk.Button(self.ventana, text = "≥", width = 3)
-                self.botonIgual.place(x=20+x1,y=200+y1)
-                self.igualA = ttk.Entry(self.ventana, width = 5)
-                self.igualA.place(x=60+x1,y=200+y1)
-                y1 += 40
+            peso = ttk.Label(self.ventana, text = "Pesos", width = 5, font=("Helvetica","11"))
+            peso.place(x=10,y=200)
+            articulo = ttk.Label(self.ventana, text = "Valores", width = 10, font=("Helvetica","11"))
+            articulo.place(x=1,y=250)
+            
+            for x in range(int(self.articulosEntrada.get())):
+                self.peso = ttk.Entry(self.ventana, width = 5)
+                self.peso.place(x=70+x1, y= 200)
+                x1 += 50
+
+            x1 = 0
+            
+            for y in range(int(self.articulosEntrada.get())):
+                self.articulo = ttk.Entry(self.ventana, width = 5)
+                self.articulo.place(x=70+x1, y= 250)
+                x1 += 50
 
     def __init__(self):
         #Configuracion ventana
@@ -40,16 +42,16 @@ class Aplicacion():
         brayan.pack(anchor = CENTER)
         
         #Labels
-        self.variables = Label(self.ventana, text = "Variables:",width = 15, font=("Helvetica","15"))
+        self.variables = Label(self.ventana, text = "Peso limite",width = 15, font=("Helvetica","15"))
         self.variables.pack(anchor = NW)
-        self.restricciones = Label(self.ventana, text = "Restricciones:", width = 15, font = ("Helvetica","15"))
+        self.restricciones = Label(self.ventana, text = "Articulos:", width = 15, font = ("Helvetica","15"))
         self.restricciones.pack(anchor = NW)
 
         #Entradas
-        self.variablesEntrada = ttk.Entry(self.ventana)
-        self.variablesEntrada.place(x=150,y=72)
-        self.restriccionesEntrada = ttk.Entry(self.ventana)
-        self.restriccionesEntrada.place(x=150,y=102)
+        self.pesoEntrada = ttk.Entry(self.ventana)
+        self.pesoEntrada.place(x=150,y=72)
+        self.articulosEntrada = ttk.Entry(self.ventana)
+        self.articulosEntrada.place(x=150,y=102)
 
         #Boton
         self.boton = ttk.Button(self.ventana, text = "Listo", command = self.crearTabla)
