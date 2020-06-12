@@ -1,6 +1,6 @@
 # Methodo-de-la-Mochila-Python
 
-**Integrantes**
+### Integrantes
 -Brayan Alejandro Puentes Camargo - 20181020044
 -Christian Camilo Martines Rey    - 20181020021
 -Jose Alejandro Pintor Gonzalez   - 20152020054
