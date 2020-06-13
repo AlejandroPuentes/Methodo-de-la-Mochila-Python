@@ -1,5 +1,3 @@
-#devuelve una colección de elementos con la mayor cantidad de objetos menores del pesoTotal
-#El formato de entrada por tupla es: peso(kg),valor($)
 def max(listaTuplas,pesoTotal):
     tam = len(listaTuplas)
     if tam>0:
