@@ -1,10 +1,12 @@
 from Controlador import Controlador
-from Vista import Aplicacion
+from Vista import Ventana
+from Modelo import Modelo
 
 class programacionBinaria():
     def __init__(self):
-        v = Aplicacion()
-        c = Controlador(v)
+        v = Ventana()
+        m = Modelo()
+        c = Controlador(v,m)
 
 def main():
     programacionBinaria()
