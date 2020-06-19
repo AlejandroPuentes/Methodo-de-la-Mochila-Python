@@ -4,6 +4,8 @@ from tkinter import messagebox as MessageBox
 
 class Ventana():
 
+class Aplicacion():
+
     def __init__(self):
         #Configuracion ventana
         self.ventana = Tk()    
@@ -50,6 +52,12 @@ class Ventana():
         #Boton para hacer el cálculo
         self.btnCalcular = ttk.Button(self.ventana, text = "Calcular")
         #self.btnCalcular.place(x=400, y=450)
+        
+        self.consultarPeso = ttk.Button(self.ventana, text = "Consultar Datos Peso", command = self.getPesos)
+        self.consultarPeso.place(x=50, y=450)
+
+        self.consultarArticulos = ttk.Button(self.ventana, text = "Consultar Datos Articulos", command = self.getArticulos)
+        self.consultarArticulos.place(x=250, y=450)
 
 
         #Frame
@@ -103,7 +111,21 @@ class Ventana():
 
             except ValueError:
                 MessageBox.showerror("ERROR", "Por favor, el peso debe ser positivo")
-    
+
+
+
+    def getPesos(self):
+        data = "Peso:\n"
+        for x in self.peso:
+            data = data+"\n"+x.get()
+        MessageBox.showinfo("Datos Articulo", data)
+
+    def getArticulos(self):
+        data = "Articulos:"
+        for x in self.articulo:
+            data = data+"\n"+x.get()
+        MessageBox.showinfo("Datos Articulo", data)
+
         
     def capturar_pesos(self):
         data = []
