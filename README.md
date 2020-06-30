@@ -14,7 +14,7 @@
 **Paso 1**
 Al ejecutar el programa lo primero que se encontrara es un formato como el siguiente:
 
-![alt text](https://github.com/AlejandroPuentes/Methodo-de-la-Mochila-Python/tree/master/problemaMochila/Imagen1.jpeg) 
+![alt text](https://github.com/jgruizba/Mdlpygame/blob/master/personajeWW.jpg)
 
 **Paso 2**
 
