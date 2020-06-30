@@ -14,7 +14,8 @@
 **Paso 1**
 Al ejecutar el programa lo primero que se encontrara es un formato como el siguiente:
 
-![alt text](https://github.com/jgruizba/Mdlpygame/blob/master/personajeWW.jpg)
+![alt text](https://github.com/AlejandroPuentes/Methodo-de-la-Mochila-Python/blob/master/Imagen1.jpeg)
+
 
 **Paso 2**
 
