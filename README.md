@@ -47,4 +47,4 @@
 
 <p align= "Justify">si se da la necesidad de conocer la composicion de dichos productos podemos obtenerlos mediante los siguintes botones que aparecen en la interfaz<p/> 
 
-![alt text](https://github.com/AlejandroPuentes/Methodo-de-la-Mochila-Python/blob/master/Imagen5.jpeg) 
+![alt text](https://github.com/AlejandroPuentes/Methodo-de-la-Mochila-Python/blob/master/Imagen%205.jpeg) 
